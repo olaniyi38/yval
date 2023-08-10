@@ -34,7 +34,7 @@ const ProjectPage = async ({ params }) => {
 					<h1 className="project-page__hero-title">{name}</h1>
 					<p className="project-page__hero-text">
 						<p>
-							Bringing Your Fashion Brand's Unique Identity to Life Through
+							Bringing Your Fashion Brand&apos;s Unique Identity to Life Through
 							Strategic Marketing and Advertising
 						</p>
 						<span className="discover">
