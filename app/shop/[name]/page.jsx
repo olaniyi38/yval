@@ -104,15 +104,15 @@ const ProductPage = ({ params }) => {
 					<div className="product__desc">{desc}</div>
 					<div className="product__features">
 						<ul>
-							{features.map((f) => (
-								<li>{f}</li>
+							{features.map((f, i) => (
+								<li key={i}>{f}</li>
 							))}
 						</ul>
 					</div>
 				</div>
 				<div className="product__images">
 					{images.map((url) => (
-						<div className="product__img">
+						<div key={url} className="product__img">
 							<Image alt={name} src={url} fill />
 						</div>
 					))}
@@ -125,7 +125,7 @@ const ProductPage = ({ params }) => {
 				</hgroup>
 				<div className="faqs">
 					{faqs.map(({ q, a }) => (
-						<Accordion question={q} answer={a} />
+						<Accordion key={q} question={q} answer={a} />
 					))}
 				</div>
 			</div>

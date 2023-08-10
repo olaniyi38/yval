@@ -28,6 +28,7 @@ const HomeAbout = () => {
 					<Image
 						fill
 						src="https://assets.website-files.com/63cffb7c16ab3347fc9734c8/63d3bfeb533099399bbe18fb_home-about.webp"
+						alt=""
 					/>
 				</div>
 				<div className="home-about__top-about">
@@ -46,7 +47,7 @@ const HomeAbout = () => {
 			</div>
 			<div className="home-about__tabs">
 				<div className="home-about__tabs-content img-noise">
-					<Image fill src={tabImgs[imgIndex]} />
+					<Image fill src={tabImgs[imgIndex]} alt="" />
 				</div>
 				<div className="home-about__tabs-menu">
 					{tabMenus.map((title, index) => (

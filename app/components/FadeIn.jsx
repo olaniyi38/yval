@@ -25,7 +25,7 @@ const FadeIn = ({ children }) => {
 		if (inView) {
 			controls.start("visible");
 		} 
-	}, [inView]);
+	}, [inView, controls]);
 
 	return (
 		<>

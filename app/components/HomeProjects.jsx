@@ -37,11 +37,9 @@ const HomeProjects = () => {
 									backgroundImage: `url(${img})`,
 								}}
 								className="img-noise home-projects__project-img"
-							>
-								{/* <Image fill src={img} alt="img" /> */}
-							</div>
+							></div>
 							<div className="home-projects__project-about">
-								<Image width={70} height={70} src={logo} />
+								<Image width={70} height={70} src={logo} alt="" />
 								<h1>{name}</h1>
 								<div>
 									<span className="arrow">

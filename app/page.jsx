@@ -28,7 +28,7 @@ const HomePage = () => {
 				<section className="home-client-logos">
 					<div>
 						{clientLogos.map((url) => (
-							<Image key={url} width={100} height={100} src={url} />
+							<Image key={url} width={100} height={100} src={url}  alt=""/>
 						))}
 					</div>
 				</section>

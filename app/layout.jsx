@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
 					<section className="contact">
 						<h4>contact</h4>
 						<div>
-							<p>Let's make your fashion brand shine</p>
+							<p>Let&apos;s make your fashion brand shine</p>
 							<button>
 								<span>get in touch</span>
 								<span className="arrow">

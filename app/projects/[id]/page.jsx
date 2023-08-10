@@ -67,7 +67,7 @@ const ProjectPage = async ({ params }) => {
 
 			<div className="project-page__process">
 				{Object.entries(process).map(([title, about]) => (
-					<div className="card">
+					<div key={title} className="card">
 						<div className="card__header">
 							<div className="card__subtitle">{title}</div>
 						</div>

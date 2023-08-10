@@ -48,7 +48,7 @@ const Hero = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.8 }}
 				>
-					Bringing Your Fashion Brand's Unique Identity to Life Through
+					Bringing Your Fashion Brand&apos;s Unique Identity to Life Through
 					Strategic Marketing and Advertising.
 				</motion.p>
 				<motion.div
