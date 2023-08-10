@@ -1,0 +1,23 @@
+@use '../utils' as *;
+
+.button {
+    background: $v-dark-gray;
+    color: $white;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+
+
+    &--inverted {
+        background: $white;
+        color: $dark-gray;
+        border: none;
+    }
+
+    &--yellow {
+        background: $dark-yellow;
+        color: $black;
+        border: none;
+    }
+}

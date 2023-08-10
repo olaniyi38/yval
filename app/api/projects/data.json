@@ -1,0 +1,134 @@
+[
+    {
+        "id": "1",
+        "name": "fashion",
+        "tag": "branding",
+        "client": "invision studio",
+        "timeline": "8 weeks",
+        "services": "service",
+        "website": "lorem.io",
+        "process": {
+            "challenge": {
+                "name": "Surmounting Industry Competition",
+                "text": "Our fashion brand faced the daunting challenge of standing out in a crowded and competitive market. We aimed to break through the noise and establish our unique voice and identity."
+            },
+            "goal": {
+                "name": "Aiming for Brand Success",
+                "text": "Our goal was to create a distinct brand identity that would resonate with our target audience, foster brand loyalty, and position us as a leader in the fashion industry."
+            },
+            "result": {
+                "name": "Successful Brand Growth",
+                "text": "Through our strategic efforts, we achieved a remarkable brand transformation, leading to increased brand recognition, customer engagement, market share growth, and a thriving business that exceeded our expectations."
+            }
+        },
+        "thumbImgs": [
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d2ba6f2f501138b0c87630_project-01-thumb-01.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d2ba718b7e80e42243f183_project-01-thumb-02.webp"
+        ],
+        "gallery": [
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d38111e68d874697c5c1ea_project-01-gallery-02.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3811134f3025c964694d0_project-01-gallery-01.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d38111a0cfd5792efbd968_project-01-gallery-03.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d381119b390b62cd37b7e4_project-01-gallery-04.webp"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "noise",
+        "tag": "branding",
+        "client": "square media",
+        "timeline": "4 weeks",
+        "services": "service",
+        "website": "lorem.io",
+        "process": {
+            "challenge": {
+                "name": "Surmounting Industry Competition",
+                "text": "Our fashion brand faced the daunting challenge of standing out in a crowded and competitive market. We aimed to break through the noise and establish our unique voice and identity."
+            },
+            "goal": {
+                "name": "Aiming for Brand Success",
+                "text": "Our goal was to create a distinct brand identity that would resonate with our target audience, foster brand loyalty, and position us as a leader in the fashion industry."
+            },
+            "result": {
+                "name": "Successful Brand Growth",
+                "text": "Through our strategic efforts, we achieved a remarkable brand transformation, leading to increased brand recognition, customer engagement, market share growth, and a thriving business that exceeded our expectations."
+            }
+        },
+        "thumbImgs": [
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d2bc0a8e534151b55c46b4_project-03-thumb-02.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d2bc0bccf267611d0b8c18_project-03-thumb-01.webp"
+        ],
+        "gallery": [
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3813ad6508bf0ddc16e19_project-02-gallery-04.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3813ad6508b7530c16e1a_project-02-gallery-03.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3813a2762ef71bc718658_project-02-gallery-01.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3813a2762ef71bc718658_project-02-gallery-01.webp"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "lawyers",
+        "tag": "identity",
+        "client": "prince studio",
+        "timeline": "8 weeks",
+        "services": "service",
+        "website": "lorem.io",
+        "process": {
+            "challenge": {
+                "name": "Surmounting Industry Competition",
+                "text": "Our fashion brand faced the daunting challenge of standing out in a crowded and competitive market. We aimed to break through the noise and establish our unique voice and identity."
+            },
+            "goal": {
+                "name": "Aiming for Brand Success",
+                "text": "Our goal was to create a distinct brand identity that would resonate with our target audience, foster brand loyalty, and position us as a leader in the fashion industry."
+            },
+            "result": {
+                "name": "Successful Brand Growth",
+                "text": "Through our strategic efforts, we achieved a remarkable brand transformation, leading to increased brand recognition, customer engagement, market share growth, and a thriving business that exceeded our expectations."
+            }
+        },
+        "thumbImgs": [
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d2bc6b677c64ce9d76b52e_project-03-thumb-01.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d2bc6c06650374418cdfd0_project-03-thumb-02.webp"
+        ],
+        "gallery": [
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3814a7bbe6bd30e9fa042_project-03-gallery-01.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d38149bcdd5e400b9fdba3_project-03-gallery-02.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3814ab8c7b39970d1a098_project-03-gallery-03.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d38149b8c7b34f51d1a097_project-03-gallery-04.webp"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "flowers",
+        "tag": "identity",
+        "client": "play works",
+        "timeline": "8 weeks",
+        "services": "service",
+        "website": "lorem.io",
+        "process": {
+            "challenge": {
+                "name": "Surmounting Industry Competition",
+                "text": "Our fashion brand faced the daunting challenge of standing out in a crowded and competitive market. We aimed to break through the noise and establish our unique voice and identity."
+            },
+            "goal": {
+                "name": "Aiming for Brand Success",
+                "text": "Our goal was to create a distinct brand identity that would resonate with our target audience, foster brand loyalty, and position us as a leader in the fashion industry."
+            },
+            "result": {
+                "name": "Successful Brand Growth",
+                "text": "Through our strategic efforts, we achieved a remarkable brand transformation, leading to increased brand recognition, customer engagement, market share growth, and a thriving business that exceeded our expectations."
+            }
+        },
+        "thumbImgs": [
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d2bc7557aff3596c70400e_project-04-thumb-02.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d2bc73942647308947d44d_project-04-thumb-01.webp"
+        ],
+        "gallery": [
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3815a2ba466aec79cfd34_project-04-gallery-01.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3815aa1dabcdbb0f5ac6a_project-04-gallery-02.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3815a860711823ee12a27_project-04-gallery-03.webp",
+            "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d3815ae68d870b29c5c85a_project-04-gallery-04.webp"
+        ]
+    }
+]

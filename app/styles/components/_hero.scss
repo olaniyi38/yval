@@ -1,0 +1,98 @@
+@use '../utils' as *;
+
+.hero {
+    display: grid;
+    margin: 1rem 1rem;
+    grid-template-columns: 1fr;
+    border-radius: .7rem;
+
+
+    &__content {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        z-index: 2;
+        align-self: flex-end;
+        padding: 0rem 1rem 2rem 1rem;
+
+        hgroup {
+            font-weight: 400;
+            font-size: clamp(2.3rem, 0.6714rem + 8.1429vw, 8rem);
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__img {
+        aspect-ratio: 3 / 4;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        position: relative;
+
+        img {
+            border-radius: .7rem;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 33% 50%;
+        }
+    }
+
+    .more {
+        display: flex;
+        text-transform: uppercase;
+        align-items: center;
+        gap: 0rem .5rem;
+        margin-top: 1rem;
+        font-weight: 500;
+
+        svg {
+            background: rgba(128, 128, 128, 0.13);
+            width: 2.3rem;
+            height: 2.3rem;
+            border-radius: 5rem;
+            padding: .5rem;
+        }
+    }
+
+    @media screen and (min-width:48rem) {
+        &__content {
+            padding: 0rem 2rem 2rem 3rem;
+
+            p {
+                font-size: 1.5rem;
+                margin-top: 1rem;
+            }
+        }
+
+        &__img {
+            aspect-ratio: 3 / 2;
+        }
+    }
+
+    @media screen and (min-width:64rem) {
+        &__img {
+            aspect-ratio: 16 / 8;
+        }
+
+        &__content {
+            padding-left: 10rem;
+
+            hgroup {
+
+                h4 {
+                    padding-left: 8rem;
+                }
+            }
+
+            p {
+                max-width: 60%;
+            }
+        }
+    }
+
+}

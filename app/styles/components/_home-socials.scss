@@ -1,0 +1,64 @@
+@use "../utils" as *;
+
+.home-socials {
+    padding: 1rem;
+
+    marquee {
+        margin-bottom: .5rem;
+
+        span {
+            margin-right: 1rem;
+            color: $muted;
+            text-transform: uppercase;
+
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 1rem 2rem;
+    }
+
+    .card {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+
+        .arrow {
+            padding: .3rem;
+
+            svg {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+
+        &__body {
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+
+    }
+
+
+
+    @media screen and (min-width:48rem) {
+        .card {
+            &__body {
+                margin-top: 3rem;
+            }
+        }
+
+    }
+
+    @media screen and (min-width:64rem) {
+        .card {
+            &__body {
+                margin-top: 3.5rem;
+            }
+        }
+
+    }
+
+}

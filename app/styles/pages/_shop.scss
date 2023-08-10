@@ -1,0 +1,53 @@
+@use '../utils/' as *;
+
+.shop {
+    padding: 1rem;
+
+    &__grid {
+        display: grid;
+
+        gap: 2rem;
+    }
+
+    &__title {
+        font-size: clamp(1.7rem, 0.8009rem + 4.1101vw, 4.5rem);
+        margin: 1rem 0rem;
+    }
+
+    .product {
+        &__price {
+            display: flex;
+            align-items: center;
+            gap: 0rem 1rem;
+        }
+    }
+
+    .card {
+        &__img {
+            aspect-ratio: 3 / 3;
+        }
+
+        &__text {
+            font-weight: 500;
+            font-size: 1rem;
+            color: $white;
+        }
+
+        &__body {
+            margin-bottom: 0;
+        }
+
+        .strike-through {
+            font-weight: 400;
+            color: $muted;
+            display: inline;
+        }
+
+    }
+
+    @media screen and (min-width:30rem) {
+        &__grid {
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        }
+    }
+}

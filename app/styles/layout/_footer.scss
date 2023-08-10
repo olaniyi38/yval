@@ -1,0 +1,118 @@
+@use '../utils/' as *;
+
+.footer {
+    gap: 1rem;
+    padding: 1rem 1rem 4rem 1rem;
+    display: grid;
+
+    color: $muted;
+    text-transform: uppercase;
+
+
+
+    > div {
+        background: $v-dark-gray;
+        border-radius: .5rem;
+        padding: 1rem;
+
+        h1 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            color: $white;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+            padding-top: 2rem;
+
+            svg {
+                border: 1px solid $dark-gray;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 4rem;
+                background: rgba(138, 124, 124, 0.075);
+                padding: .5rem;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    &__nav {
+
+        div {
+            display: flex;
+            flex-direction: column;
+            color: $muted;
+            gap: 1rem;
+
+            a {
+                position: relative;
+                width: fit-content;
+                transition: all .2s ease-in-out;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    background: $white;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 1px;
+                    transition: transform .2s ease-in-out;
+                    transform-origin: right;
+                }
+
+                &:hover {
+                    color: $white;
+
+                    &::before {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width:64rem) {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 1fr 5rem;
+        grid-template-areas:
+            "socials nav"
+            "socials nav"
+            "socials copy";
+
+        > div {
+            padding: 2rem;
+        }
+
+        &__nav {
+            grid-area: nav;
+        }
+
+        &__socials {
+            grid-area: socials;
+
+        }
+
+        &__copy {
+            grid-area: copy;
+        }
+    }
+
+}

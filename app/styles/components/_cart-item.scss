@@ -1,0 +1,78 @@
+@use '../utils' as *;
+
+.cart-item {
+    display: flex;
+
+
+
+    &__img {
+        flex: none;
+
+        img {
+            border-radius: .3rem;
+        }
+    }
+
+    &__info {
+        flex: 1 1 0;
+        text-transform: capitalize;
+        padding: 0rem .7rem;
+    }
+
+    &__name {
+        font-size: 1.1rem
+    }
+
+    &__price {
+        font-size: .9rem;
+        display: flex;
+        align-items: center;
+        gap: 0rem 1rem;
+
+        p {
+            font-weight: 400;
+        }
+
+        s {
+            color: $muted;
+        }
+    }
+
+    &__size {
+        color: $muted;
+    }
+
+    &__remove {
+        text-decoration: underline;
+    }
+
+    &__qty {
+        flex: none;
+
+        input {
+            border: 1px solid hsl(0, 1%, 40%);
+            color: $white;
+            background: $dark-gray;
+            width: 4rem;
+            border-radius: .5rem;
+            font-size: 1rem;
+            padding: .5rem;
+            transition: all .1s ease-in-out;
+
+            &:focus-visible {
+                outline: none;
+                border: 1px solid hsl(0, 2%, 66%);
+            }
+        }
+    }
+
+    @media screen and (min-width:48rem) {
+        &__img {
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+
+}

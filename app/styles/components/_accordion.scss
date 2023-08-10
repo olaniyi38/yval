@@ -1,0 +1,64 @@
+@use '../utils/' as *;
+
+.accordion {
+    background: $v-dark-gray;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: $dark-gray;
+    }
+
+    &.active {
+        .accordion__content {
+            max-height: 400px;
+        }
+
+        svg {
+            transform: rotate(0deg);
+        }
+
+    }
+
+    &__title {
+        position: relative;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2rem;
+
+        svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            right: 0rem;
+            top: .2rem;
+            position: absolute;
+            // /* From https://css.glass */
+            // background: rgba(72, 72, 72, 0.22);
+            // border-radius: 16px;
+            // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            // backdrop-filter: blur(5px);
+            // -webkit-backdrop-filter: blur(5px);
+            // border: 1px solid rgba(72, 72, 72, 0.35);
+            color: $muted;
+            transform: rotate(45deg);
+            stroke-width: .01px;
+            transition: all .2s ease-in-out;
+        }
+
+    }
+
+    &__content {
+        color: $muted;
+        transition: max-height .3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+        padding-top: .5rem;
+
+
+
+
+    }
+}

@@ -1,0 +1,15 @@
+//  Primary -
+$v-dark-gray:hsl(0, 0%, 12%); 
+$dark-gray:hsl(0, 0%, 16%);
+$dark-yellow:hsl(50, 52%, 60%);
+$black: hsl(0, 0%, 7%);
+$white:hsl(43, 24%, 94%);
+$black-gray: #3244;
+$muted:hsl(45, 2%, 59%);
+//FLUID FONT-SIZES
+
+$scale-xl: clamp(2.5rem, 2.1364rem + 1.8182vw, 3.5rem);
+$scale-l: clamp(2rem, 1.3rem + 2vw, 2.8rem);
+$scale-m: clamp(1.5rem, 1.1818rem + 1.0909vw, 2rem);
+$scale-s: clamp(1rem, 0.9091rem + 0.4545vw, 1.1rem);
+$scale-xs: clamp(0.85rem, 0.7955rem + 0.2727vw, 1rem);
