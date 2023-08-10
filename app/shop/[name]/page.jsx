@@ -89,6 +89,7 @@ const ProductPage = ({ params }) => {
 						<div className="product__sizes">
 							{sizes.map((s) => (
 								<button
+									key={s}
 									onClick={() => setSize(s.toLowerCase())}
 									className={`size ${size === s ? "active" : ""}`}
 								>

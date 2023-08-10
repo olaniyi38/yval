@@ -20,8 +20,8 @@ const ProjectsPage = async () => {
 			</header>
 
 			<div className="projects__items">
-				{products.map((d,i) => (
-					<FadeIn>
+				{products.map((d, i) => (
+					<FadeIn key={i}>
 						<Project data-index={i} projectData={d} />
 					</FadeIn>
 				))}

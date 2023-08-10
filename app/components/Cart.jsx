@@ -30,10 +30,7 @@ const Cart = () => {
 				</div>
 				<div className="cart__items">
 					{cartItems.length > 0 ? (
-						cartItems.map((item) => {
-							console.log(item.qty);
-							return <CartItem cartItem={item} />;
-						})
+						cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
 					) : (
 						<h1 className="cart__empty">No items here...</h1>
 					)}

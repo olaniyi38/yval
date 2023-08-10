@@ -38,7 +38,7 @@ const HomeNews = () => {
 			<h1 className="home-news__title">latest news</h1>
 			<div className="home-news__list">
 				{news.map(({ img, title, desc, tag }) => (
-					<div className="card">
+					<div key={title} className="card">
 						<div className="card__img img-noise">
 							<span
 								

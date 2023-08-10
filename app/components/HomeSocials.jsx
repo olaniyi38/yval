@@ -48,7 +48,7 @@ const HomeSocials = () => {
 
 			<div className="home-socials__cards">
 				{socials.map(({ name, desc, logo }) => (
-					<div className="card ">
+					<div key={name} className="card ">
 						<div className="card__header">
 							{logo}
 							<span className="arrow">

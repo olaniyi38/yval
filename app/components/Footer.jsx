@@ -29,7 +29,7 @@ const Footer = () => {
 				<h1>Pages</h1>
 				<div>
 					{pages.map((title) => (
-						<Link href="">{title}</Link>
+						<Link key={title} href="">{title}</Link>
 					))}
 				</div>
 			</div>

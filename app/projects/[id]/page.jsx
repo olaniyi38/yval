@@ -83,7 +83,7 @@ const ProjectPage = async ({ params }) => {
 				<h1>gallery</h1>
 				<div className="project-page__gallery-imgs">
 					{gallery.map((url) => (
-						<div className="project-page__gallery-img">
+						<div key={name} className="project-page__gallery-img">
 							<Image src={url} fill alt={name} priority />
 						</div>
 					))}

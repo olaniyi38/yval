@@ -30,7 +30,7 @@ const HomeProjects = () => {
 		<section className="home-projects">
 			<div>
 				{projects.map(({ logo, img, name }) => (
-					<Link href={"#"}>
+					<Link key={name} href={"#"}>
 						<div className="home-projects__project">
 							<div
 								style={{

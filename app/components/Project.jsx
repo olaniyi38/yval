@@ -22,7 +22,7 @@ const Project = ({ projectData }) => {
 			</div>
 			{/* <div className="project__images"> */}
 			{thumbImgs.map((img, i) => (
-				<div className="project__img img-noise" data-image={i + 1}>
+				<div key={name} className="project__img img-noise" data-image={i + 1}>
 					<Link href={`http://localhost:5173/projects/${id}`}>
 						<Image fill src={img} alt={name} />
 					</Link>
