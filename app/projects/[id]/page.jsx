@@ -2,7 +2,7 @@ import Image from "next/image";
 import { GoArrowDown } from "react-icons/go";
 
 async function fetchProject(id) {
-	const res = await fetch(`http://127.0.0.1:5173/api/projects/${id}`);
+	const res = await fetch(`/api/projects/${id}`);
 	const data = await res.json();
 	return data;
 }
