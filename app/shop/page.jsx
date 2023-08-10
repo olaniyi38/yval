@@ -3,9 +3,17 @@ import Link from "next/link";
 import FadeIn from "../components/FadeIn";
 
 async function fetchProducts() {
-	const res = await fetch("http://127.0.0.1:5173/api/shop", { cache: 'no-store' });
-	const products = await res.json();
-	return products;
+	try {
+        const res = await fetch('http://127.0.0.1:5173/api/projects', { cache: "no-store" });
+
+        if (!res.ok) {
+            throw new Error('Failed to fetch data');
+        }
+
+        return res.json();
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 const ShopPage = async () => {

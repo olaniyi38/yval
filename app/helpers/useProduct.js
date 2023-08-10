@@ -4,7 +4,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const useProduct = (productName) => {
     const { data, error, isLoading } = useSWR(
-        `/api/shop/${productName}`,
+        `http://127.0.0.1/api/shop/${productName}`,
         fetcher
     );
 
