@@ -3,7 +3,7 @@ import Link from "next/link";
 import FadeIn from "../components/FadeIn";
 
 async function fetchProducts() {
-	const res = await fetch("http://localhost:5173/api/shop");
+	const res = await fetch("http://127.0.0.1:5173/api/shop");
 	const products = await res.json();
 	return products;
 }

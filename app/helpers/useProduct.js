@@ -2,9 +2,9 @@ import useSWR from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const useItem = (itemId) => {
+const useProduct = (productName) => {
     const { data, error, isLoading } = useSWR(
-        `http://localhost:5173/api/shop/${itemId}`,
+        `http:/127.0.0.1:5173/api/shop/${productName}`,
         fetcher
     );
 
@@ -16,4 +16,4 @@ const useItem = (itemId) => {
 
 }
 
-export default useItem
+export default useProduct

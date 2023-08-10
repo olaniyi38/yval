@@ -6,7 +6,7 @@ import Image from "next/image";
 import faqs from "@/app/faqs";
 import Accordion from "@/app/components/Accordion";
 import { useEffect, useState } from "react";
-import useItem from "@/app/helpers/useItem";
+import useProduct from "@/app/helpers/useProduct";
 import { useDispatch } from "react-redux";
 import { addItem, setCartActive } from "@/app/features/shop/shopSlice";
 import generateRandomId from "@/app/helpers/uuid";
@@ -20,7 +20,7 @@ const ProductPage = ({ params }) => {
 	const [size, setSize] = useState(null);
 	const [qty, setQty] = useState(1);
 
-	const { data, error, isLoading } = useItem(productName);
+	const { data, error, isLoading } = useProduct(productName);
 
 	useEffect(() => {
 		window.scrollTo({

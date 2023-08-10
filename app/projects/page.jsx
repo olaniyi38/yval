@@ -1,10 +1,10 @@
 import React from "react";
 import Project from "../components/Project";
-import fetchProducts from "../helpers/fetchProducts";
+import fetchProjects from "../helpers/fetchProjects";
 import FadeIn from "../components/FadeIn";
 
 const ProjectsPage = async () => {
-	const products = await fetchProducts();
+	const products = await fetchProjects();
 
 	return (
 		<section className="projects">
