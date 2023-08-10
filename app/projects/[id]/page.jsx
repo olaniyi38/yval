@@ -2,7 +2,7 @@ import Image from "next/image";
 import { GoArrowDown } from "react-icons/go";
 
 async function fetchProject(id) {
-	const res = await fetch(`/api/projects/${id}`);
+	const res = await fetch(`/api/projects/${id}`, { cache: 'no-store' });
 	const data = await res.json();
 	return data;
 }
