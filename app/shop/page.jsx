@@ -4,16 +4,18 @@ import FadeIn from "../components/FadeIn";
 
 async function fetchProducts() {
 	try {
-        const res = await fetch('http://127.0.0.1:5173/api/projects', { cache: "no-store" });
+		const res = await fetch(process.env.NEXT_PUBLIC_API_URl + "/api/shop", {
+			cache: "no-store",
+		});
 
-        if (!res.ok) {
-            throw new Error('Failed to fetch data');
-        }
+		if (!res.ok) {
+			throw new Error("Failed to fetch data");
+		}
 
-        return res.json();
-    } catch (err) {
-        console.log(err);
-    }
+		return res.json();
+	} catch (err) {
+		console.log(err);
+	}
 }
 
 const ShopPage = async () => {

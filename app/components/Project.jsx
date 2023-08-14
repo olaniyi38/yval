@@ -2,10 +2,12 @@ import Image from "next/image";
 import ArrowSvg from "./Arrow";
 import Link from "next/link";
 
-const Project = ({ projectData }) => {
+const Project = ({ projectData, index }) => {
 	const { name, tag, thumbImgs, id } = projectData;
+	const isEven = index % 2 === 0;
+
 	return (
-		<div className="project">
+		<div className={`project ${isEven ? "row-reverse" : ""}`}>
 			<div className="project__about">
 				<Link href={`http://localhost:5173/projects/${id}`}>
 					<div className="card">

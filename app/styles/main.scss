@@ -25,6 +25,10 @@ img {
     object-fit: cover;
 }
 
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
 .img-noise {
     &::before {
         content: '';
