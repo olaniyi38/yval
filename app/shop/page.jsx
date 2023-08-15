@@ -27,7 +27,7 @@ const ShopPage = async () => {
 			<div className="shop__grid">
 				{products.map(({ thumbImg, name, price }) => (
 					<FadeIn key={name}>
-						<Link href={`http://localhost:5173/shop/${name.toLowerCase()}`}>
+						<Link href={`/shop/${name.toLowerCase()}`}>
 							<div className="card product">
 								<div className="card__img img-noise">
 									<Image fill src={thumbImg} alt="name" />

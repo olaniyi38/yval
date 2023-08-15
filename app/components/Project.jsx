@@ -9,7 +9,7 @@ const Project = ({ projectData, index }) => {
 	return (
 		<div className={`project ${isEven ? "row-reverse" : ""}`}>
 			<div className="project__about">
-				<Link href={`http://localhost:5173/projects/${id}`}>
+				<Link href={`/projects/${id}`}>
 					<div className="card">
 						<div className="card__body">
 							<div className="card__subtitle">{tag}</div>
@@ -25,8 +25,8 @@ const Project = ({ projectData, index }) => {
 			{/* <div className="project__images"> */}
 			{thumbImgs.map((img, i) => (
 				<div key={name} className="project__img img-noise" data-image={i + 1}>
-					<Link href={`http://localhost:5173/projects/${id}`}>
-						<Image fill src={img} alt={name} />
+					<Link href={`/projects/${id}`}>
+						<Image fill src={img} alt={name}  />
 					</Link>
 				</div>
 			))}
