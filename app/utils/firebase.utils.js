@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { doc, getDoc, addDoc, getFirestore, writeBatch, query, getDocs, collection } from 'firebase/firestore'
-import projects from '../api/projects/data.json'
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -24,17 +23,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
 
-
-export async function uploadProducts() {
-    const batch = writeBatch(db)
-    projects.map((project) => {
-        const docRef = doc(db, "projects", project.name.toLowerCase())
-        return batch.set(docRef, project)
-    })
-
-    await batch.commit()
-    console.log("done")
-}
 
 export async function fetchCollectionFromDb(collectionName) {
     const collectionRef = collection(db, collectionName)
