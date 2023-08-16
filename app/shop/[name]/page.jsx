@@ -6,11 +6,11 @@ import Image from "next/image";
 import faqs from "@/app/faqs";
 import Accordion from "@/app/components/Accordion";
 import { useEffect, useState } from "react";
-import useProduct from "@/app/helpers/useProduct";
 import { useDispatch } from "react-redux";
 import { addItem, setCartActive } from "@/app/features/shop/shopSlice";
 import generateRandomId from "@/app/helpers/uuid";
 import { toast } from "react-toastify";
+import { fetchDocumentFromDb } from "@/app/utils/firebase.utils";
 
 const ProductPage = ({ params }) => {
 	const { name: productName } = params;
@@ -19,30 +19,37 @@ const ProductPage = ({ params }) => {
 
 	const [size, setSize] = useState(null);
 	const [qty, setQty] = useState(1);
-
-	const { data, error, isLoading } = useProduct(productName);
+	const [product, setProduct] = useState(null);
 
 	useEffect(() => {
+		async function fetchProduct() {
+			try {
+				const data = await fetchDocumentFromDb(productName, "products");
+				setProduct(data);
+			} catch (error) {
+				console.log(error);
+			}
+		}
+		fetchProduct();
 		window.scrollTo({
 			behavior: "smooth",
 			top: 0,
 		});
 	}, [productName]);
 
-	if (error) {
-		console.log(error);
-		return <h1>Failed to load</h1>;
-	}
-
-	if (isLoading) {
+	if (!product) {
 		return <Loader />;
 	}
 
-	const { name, price, desc, sizes, images, features, thumbImg, id } = data;
+	const { name, price, desc, sizes, images, features, thumbImg, id } = product;
 
 	function addItemToCart() {
-		if (size === null) {
+		if (size === null && qty > 0) {
 			toast.warning("Please select a size");
+			return;
+		}
+		if (qty === 0) {
+			toast.warning("Quantity can't be zero");
 			return;
 		}
 		const cartItem = {

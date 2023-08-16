@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 import { GoArrowUpRight } from "react-icons/go";
+import Card from "./card/Card";
 
 const services = [
 	{
@@ -30,7 +31,19 @@ const HomeServices = () => {
 				{services.map((data) => {
 					return (
 						<Link key={data.name} href={"#"}>
-							<div className="card">
+							<Card>
+								<Card.Body>
+									<Card.Title>{data.name}</Card.Title>
+									<Card.Text>{data.desc}</Card.Text>
+								</Card.Body>
+								<Card.Footer>
+									<span className="arrow">
+										<GoArrowUpRight />
+									</span>
+									<span>about {data.name}</span>
+								</Card.Footer>
+							</Card>
+							{/* <div className="card">
 								<div className="card__body">
 									<h1 className="card__title">{data.name}</h1>
 									<p className="card__text">{data.desc}</p>
@@ -41,7 +54,7 @@ const HomeServices = () => {
 									</span>
 									<span>about {data.name}</span>
 								</div>
-							</div>
+							</div> */}
 						</Link>
 					);
 				})}

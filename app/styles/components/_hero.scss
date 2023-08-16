@@ -21,7 +21,7 @@
             line-height: 1.2;
         }
 
-        p {
+        &-txt {
             font-size: 1.2rem;
             margin-top: 1rem;
         }
@@ -63,7 +63,7 @@
         &__content {
             padding: 0rem 2rem 2rem 3rem;
 
-            p {
+            &-txt {
                 font-size: 1.5rem;
                 margin-top: 1rem;
             }
@@ -89,7 +89,7 @@
                 }
             }
 
-            p {
+            &-txt {
                 max-width: 60%;
             }
         }

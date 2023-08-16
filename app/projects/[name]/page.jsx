@@ -1,33 +1,16 @@
+import { fetchDocumentFromDb } from "@/app/utils/firebase.utils";
 import Image from "next/image";
 import { GoArrowDown } from "react-icons/go";
 
-async function fetchProject(id) {
-	try {
-		const res = await fetch(
-			process.env.NEXT_PUBLIC_API_URl + `/api/projects/${id}`,
-			{
-				cache: "no-store",
-			}
-		);
-
-		if (!res.ok) {
-			throw new Error("Failed to fetch data");
-		}
-
-		return res.json();
-	} catch (err) {
-		console.log(err);
-	}
-}
-
 const ProjectPage = async ({ params }) => {
-	const { id } = params;
+	const { name: projectName } = params;
 
-	const projectData = await fetchProject(id);
+	const projectData = await fetchDocumentFromDb(projectName, "projects");
+
+	console.log(projectData);
 
 	const {
 		name,
-		tag,
 		thumbImgs,
 		gallery,
 		client,
@@ -45,7 +28,7 @@ const ProjectPage = async ({ params }) => {
 				</div>
 				<div>
 					<h1 className="project-page__hero-title">{name}</h1>
-					<p className="project-page__hero-text">
+					<div className="project-page__hero-text">
 						<p>
 							Bringing Your Fashion Brand&apos;s Unique Identity to Life Through
 							Strategic Marketing and Advertising
@@ -56,7 +39,7 @@ const ProjectPage = async ({ params }) => {
 							</span>
 							<span>Discover</span>
 						</span>
-					</p>
+					</div>
 				</div>
 			</div>
 			<div className="project-page__about">

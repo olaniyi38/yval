@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cyriacbr/react-split-text": "^1.0.0",
     "@reduxjs/toolkit": "^1.9.5",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
+    "firebase": "^10.1.0",
     "framer-motion": "^10.15.0",
     "gsap": "^3.12.2",
     "murmurhash3js": "^3.0.1",

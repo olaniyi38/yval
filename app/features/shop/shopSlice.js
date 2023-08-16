@@ -38,11 +38,8 @@ const shopSlice = createSlice({
             const { id, value } = action.payload
             const existingItem = state.cart.find((cartItem) => cartItem.id === id)
             if (existingItem) {
-                console.log(value)
-
                 existingItem.qty = value
             }
-
             toast.info("Item upated")
         },
         setCartActive: (state, action) => {

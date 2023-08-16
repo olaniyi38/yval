@@ -1,25 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "../components/FadeIn";
+import { fetchCollectionFromDb, uploadProducts} from "../utils/firebase.utils";
 
-async function fetchProducts() {
-	try {
-		const res = await fetch(process.env.NEXT_PUBLIC_API_URl + "/api/shop", {
-			cache: "no-store",
-		});
 
-		if (!res.ok) {
-			throw new Error("Failed to fetch data");
-		}
-
-		return res.json();
-	} catch (err) {
-		console.log(err);
-	}
-}
 
 const ShopPage = async () => {
-	const products = await fetchProducts();
+	const products = await fetchCollectionFromDb("products");
 
 	return (
 		<section className="shop">
@@ -28,13 +15,13 @@ const ShopPage = async () => {
 				{products.map(({ thumbImg, name, price }) => (
 					<FadeIn key={name}>
 						<Link href={`/shop/${name.toLowerCase()}`}>
-							<div className="card product">
+							<div className="card ">
 								<div className="card__img img-noise">
 									<Image fill src={thumbImg} alt="name" />
 								</div>
 								<div className="card__body">
 									<h1 className="card__title">{name}</h1>
-									<div className="product__price">
+									<div className="card__footer">
 										<p className="card__text">
 											${Number(price).toFixed(2)} USD
 										</p>

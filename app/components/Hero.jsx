@@ -43,7 +43,8 @@ const Hero = () => {
 						& branding
 					</motion.h4>
 				</hgroup>
-				<motion.p
+				<motion.p 
+				className="hero__content-txt"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.8 }}

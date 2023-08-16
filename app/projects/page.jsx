@@ -2,9 +2,10 @@ import React from "react";
 import Project from "../components/Project";
 import fetchProjects from "../helpers/fetchProjects";
 import FadeIn from "../components/FadeIn";
+import { fetchCollectionFromDb, uploadProducts } from "../utils/firebase.utils";
 
 const ProjectsPage = async () => {
-	const products = await fetchProjects();
+	const projects = await fetchCollectionFromDb("projects");
 
 	return (
 		<section className="projects">
@@ -20,9 +21,9 @@ const ProjectsPage = async () => {
 			</header>
 
 			<div className="projects__items">
-				{products.map((d, i) => (
+				{projects.map((d, i) => (
 					<FadeIn key={i}>
-						<Project index={i+1} projectData={d} />
+						<Project index={i + 1} projectData={d} />
 					</FadeIn>
 				))}
 			</div>

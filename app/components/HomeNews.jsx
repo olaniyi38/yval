@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import Card from "./card/Card";
 
 const news = [
 	{
@@ -38,28 +39,25 @@ const HomeNews = () => {
 			<h1 className="home-news__title">latest news</h1>
 			<div className="home-news__list">
 				{news.map(({ img, title, desc, tag }) => (
-					<div key={title} className="card">
-						<div className="card__img img-noise">
-							<span
-								
-								className="arrow"
-							>
+					<Card key={title}>
+						<Card.Image imgUrl={img}>
+							<span className="arrow">
 								<GoArrowUpRight />
 							</span>
 							<Image fill src={img} alt="img" />
-							<span className="card__tag">{tag}</span>
-						</div>
-						<div className="card__body">
-							<div className="card__title">{title}</div>
-							<div className="card__text">{desc}</div>
-						</div>
-						<div className="card__footer">
+							<Card.Tag>{tag}</Card.Tag>
+						</Card.Image>
+						<Card.Body>
+							<Card.Title>{title}</Card.Title>
+							<Card.Text>{desc}</Card.Text>
+						</Card.Body>
+						<Card.Footer>
 							<span className="arrow">
 								<GoArrowUpRight />
 							</span>
 							<span>read more</span>
-						</div>
-					</div>
+						</Card.Footer>
+					</Card>
 				))}
 			</div>
 		</section>

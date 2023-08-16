@@ -5,6 +5,7 @@ import {
 } from "react-icons/ai";
 import { GoArrowUpRight } from "react-icons/go";
 import { PiTwitterLogo } from "react-icons/pi";
+import Card from "./card/Card";
 
 const socials = [
 	{
@@ -33,7 +34,6 @@ const socials = [
 	},
 ];
 
-
 const HomeSocials = () => {
 	return (
 		<section className="home-socials">
@@ -48,18 +48,18 @@ const HomeSocials = () => {
 
 			<div className="home-socials__cards">
 				{socials.map(({ name, desc, logo }) => (
-					<div key={name} className="card ">
-						<div className="card__header">
+					<Card>
+						<Card.Header>
 							{logo}
 							<span className="arrow">
 								<GoArrowUpRight />
 							</span>
-						</div>
-						<div className="card__body">
-							<div className="card__title">{name}</div>
-							<div className="card__text">{desc}</div>
-						</div>
-					</div>
+						</Card.Header>
+						<Card.Body>
+							<Card.Title>{name}</Card.Title>
+							<Card.Text>{desc}</Card.Text>
+						</Card.Body>
+					</Card>
 				))}
 			</div>
 		</section>
