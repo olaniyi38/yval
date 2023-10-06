@@ -19,7 +19,6 @@ const tabMenus = [
 
 const HomeAbout = () => {
 	const [imgIndex, setImgIndex] = useState(0);
-	console.log(tabImgs[imgIndex]);
 
 	return (
 		<section className="home-about">

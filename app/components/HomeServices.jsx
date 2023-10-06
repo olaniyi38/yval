@@ -30,7 +30,7 @@ const HomeServices = () => {
 			<div className="services">
 				{services.map((data) => {
 					return (
-						<Card>
+						<Card key={data.name}>
 							<Card.Body>
 								<Card.Title>{data.name}</Card.Title>
 								<Card.Text>{data.desc}</Card.Text>
