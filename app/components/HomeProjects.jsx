@@ -34,7 +34,7 @@ const HomeProjects = () => {
 		<section className="home-projects">
 			<div>
 				{projects.map((data) => (
-					<HomeProject data={data} />
+					<HomeProject key={data.name} data={data} />
 				))}
 			</div>
 		</section>
