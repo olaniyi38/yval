@@ -25,8 +25,19 @@
         }
     }
 
+
+
     .card {
         padding: 1.5rem;
+
+        &:hover {
+            .arrow {
+                svg {
+                    @include arrowAnim($name: arrHoverTr)
+                }
+            }
+        }
+
 
         &__title {
             font-size: 1.8rem;

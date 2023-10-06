@@ -30,32 +30,20 @@ const HomeServices = () => {
 			<div className="services">
 				{services.map((data) => {
 					return (
-						<Link key={data.name} href={"#"}>
-							<Card>
-								<Card.Body>
-									<Card.Title>{data.name}</Card.Title>
-									<Card.Text>{data.desc}</Card.Text>
-								</Card.Body>
-								<Card.Footer>
+						<Card>
+							<Card.Body>
+								<Card.Title>{data.name}</Card.Title>
+								<Card.Text>{data.desc}</Card.Text>
+							</Card.Body>
+							<Card.Footer>
+								<Link href="#">
 									<span className="arrow">
 										<GoArrowUpRight />
 									</span>
 									<span>about {data.name}</span>
-								</Card.Footer>
-							</Card>
-							{/* <div className="card">
-								<div className="card__body">
-									<h1 className="card__title">{data.name}</h1>
-									<p className="card__text">{data.desc}</p>
-								</div>
-								<div className="card__footer">
-									<span className="arrow">
-										<GoArrowUpRight />
-									</span>
-									<span>about {data.name}</span>
-								</div>
-							</div> */}
-						</Link>
+								</Link>
+							</Card.Footer>
+						</Card>
 					);
 				})}
 			</div>

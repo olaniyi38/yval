@@ -3,8 +3,8 @@ import Image from "next/image";
 const CardHeader = ({ children }) => (
     <div className="card__header">{ children }</div>
 );
-const CardImage = ({ imgUrl, children }) => (
-    <div className="card__img img-noise">
+const CardImage = ({ imgUrl, children, }) => (
+    <div className="card__img img-noise" >
         <Image fill src={ imgUrl } alt="img" />
         { children }
     </div>

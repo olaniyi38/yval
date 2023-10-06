@@ -39,7 +39,16 @@
             font-size: 1.1rem;
 
             .discover {
-                display: none
+                display: none;
+                cursor: pointer;
+
+                &:hover {
+                    .arrow {
+                        svg {
+                            @include arrowAnim($name: arrHoverB);
+                        }
+                    }
+                }
             }
         }
 
@@ -183,6 +192,7 @@
 
                 .discover {
                     margin-top: 0;
+                    font-size: 1.1rem;
                     margin-bottom: 1rem;
                 }
             }

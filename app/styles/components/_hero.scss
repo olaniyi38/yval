@@ -49,13 +49,24 @@
         gap: 0rem .5rem;
         margin-top: 1rem;
         font-weight: 500;
+        overflow: hidden;
+        cursor: pointer;
 
-        svg {
+        &:hover {
+            .arrow {
+                svg {
+                    @include arrowAnim($name: arrHoverB)
+                }
+            }
+        }
+
+        .arrow {
             background: rgba(128, 128, 128, 0.13);
             width: 2.3rem;
             height: 2.3rem;
             border-radius: 5rem;
             padding: .5rem;
+
         }
     }
 
@@ -64,7 +75,7 @@
             padding: 0rem 2rem 2rem 3rem;
 
             &-txt {
-                font-size: 1.5rem;
+                max-width: 32rem;
                 margin-top: 1rem;
             }
         }
@@ -90,7 +101,7 @@
             }
 
             &-txt {
-                max-width: 60%;
+                margin-left: 10rem;
             }
         }
     }

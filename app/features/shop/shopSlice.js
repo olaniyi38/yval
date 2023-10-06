@@ -14,7 +14,6 @@ const shopSlice = createSlice({
         addItem: (state, action) => {
             const { id, qty, size } = action.payload
             const occurences = state.cart.filter((cartItem) => cartItem.id === id)
-            // const existingItem = state.cart.find((item) => item.itemId === itemId)
             if (occurences.length !== 0) {
                 const sameSize = occurences.find((oc) => oc.size === size)
                 if (sameSize) {

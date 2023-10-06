@@ -8,23 +8,28 @@ const fadeIn = {
 		opacity: 0,
 		y: 20,
 	},
-	visible: {
+	visible: (i = 0.2) => ({
 		opacity: 1,
 		y: 0,
-	},
+		transition: {
+			delay: i,
+			duration: 0.4,
+		},
+	}),
 };
 
-const FadeIn = ({ children }) => {
+const FadeIn = ({ children, delay = 0.2 }) => {
 	const containerRef = useRef();
-	const inView = useInView(containerRef,{
-		margin:"100px 0px 0px 0px"
+	const inView = useInView(containerRef, {
+		margin: "100px 0px 0px 0px",
+		once: true,
 	});
 	const controls = useAnimation();
 
 	useEffect(() => {
 		if (inView) {
 			controls.start("visible");
-		} 
+		}
 	}, [inView, controls]);
 
 	return (
@@ -33,7 +38,7 @@ const FadeIn = ({ children }) => {
 				initial={"hidden"}
 				animate={controls}
 				variants={fadeIn}
-				transition={{ delay: 0.2 }}
+				custom={delay}
 				className="fadeIn-el"
 				ref={containerRef}
 			>

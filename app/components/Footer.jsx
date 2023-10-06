@@ -10,7 +10,6 @@ const pages = ["home", "services", "projects", "about"];
 const Footer = () => {
 	return (
 		<footer className="footer">
-		
 			<div className="footer__socials">
 				<h1>YVAl</h1>
 				<div>

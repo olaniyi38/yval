@@ -8,6 +8,7 @@ import HomeSocials from "./components/HomeSocials";
 import HomeNews from "./components/HomeNews";
 import Button, { BTN_TYPES } from "./components/Button";
 import FadeIn from "./components/FadeIn";
+import NewsLetter from "./components/NewsLetter";
 
 const clientLogos = [
 	"https://assets.website-files.com/63cffb7c16ab3347fc9734c8/63d0376fe78b8a705ea1a9a6_client-logo.svg",
@@ -37,25 +38,7 @@ const HomePage = () => {
 				
 				<HomeSocials />
 				<HomeNews />
-				<section className="home-newsletter">
-					<div className="home-newsletter__img img-noise">
-						<Image
-							fill
-							src="https://assets.website-files.com/63cffb7c16ab3347fc9734c8/63d630b9f7e09b4b1337bbe2_newsletter.webp"
-							alt="da"
-						/>
-					</div>
-					<div className="home-newsletter__body">
-						<div>
-							<h4>newsletter</h4>
-							<h1>get insights behind the scenes</h1>
-						</div>
-						<form>
-							<input placeholder="YOUR EMAIL" type="text" name="" id="" />
-							<Button variant={BTN_TYPES.yellow}>subscribe</Button>
-						</form>
-					</div>
-				</section>
+				<NewsLetter />
 			</FadeIn>
 		</main>
 	);

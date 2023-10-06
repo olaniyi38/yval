@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import Card from "./card/Card";
 
@@ -18,21 +15,15 @@ const news = [
 		desc: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam id, optio temporibus nisi consectetur!",
 		tag: "branding",
 	},
+	{
+		img: "https://assets.website-files.com/63cffb7c16ab33a28e9734f2/63d2c4afb614eeb32b9a0f0c_post-03-thumb.webp",
+		title: "Role of Public Relations in Building a Fashion Brand",
+		desc: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam id, optio temporibus nisi consectetur!",
+		tag: "identity",
+	},
 ];
 
 const HomeNews = () => {
-	const [cood, setCood] = useState({
-		top: 50,
-		left: 50,
-	});
-
-	// function handleImgHover(e) {
-	// 	const rect = e.target.getBoundingClientRect();
-	// 	setCood({
-	// 		y: e.clientY - rect.top,
-	// 		x: e.clientX - rect.left,
-	// 	});
-	// }
 
 	return (
 		<section className="home-news">

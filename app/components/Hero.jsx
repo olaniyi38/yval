@@ -23,15 +23,12 @@ const Hero = () => {
 					src="https://assets.website-files.com/63cffb7c16ab3347fc9734c8/63d2279606000f5f8a92b792_home-hero.webp"
 					fill
 					alt="img"
+					loading="eager"
 				/>
 			</div>
 			<div className="hero__content">
 				<hgroup>
-					<motion.h1 
-					variants={fadeIn}
-					initial="hidden"
-					animate="visible"
-					>
+					<motion.h1 variants={fadeIn} initial="hidden" animate="visible">
 						fashion
 					</motion.h1>
 					<motion.h4
@@ -43,8 +40,8 @@ const Hero = () => {
 						& branding
 					</motion.h4>
 				</hgroup>
-				<motion.p 
-				className="hero__content-txt"
+				<motion.p
+					className="hero__content-txt"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.8 }}
@@ -58,7 +55,9 @@ const Hero = () => {
 					transition={{ delay: 0.8 }}
 					className="more"
 				>
-					<AiOutlineArrowDown className="arrow" />
+					<span className="arrow animB">
+						<AiOutlineArrowDown />
+					</span>
 					<span>learn more</span>
 				</motion.div>
 			</div>

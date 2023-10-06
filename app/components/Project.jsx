@@ -2,6 +2,7 @@ import Image from "next/image";
 import ArrowSvg from "./Arrow";
 import Link from "next/link";
 import Card from "./card/Card";
+import { GoArrowUpRight } from "react-icons/go";
 
 const Project = ({ projectData, index }) => {
 	const { name, tag, thumbImgs, id } = projectData;
@@ -17,13 +18,15 @@ const Project = ({ projectData, index }) => {
 							<Card.Title>{name}</Card.Title>
 						</Card.Body>
 						<Card.Footer>
-							<ArrowSvg />
+							<ArrowSvg>
+								<GoArrowUpRight />
+							</ArrowSvg>
 							<span>DISCOVER</span>
 						</Card.Footer>
 					</Card>
 				</Link>
 			</div>
-			{/* <div className="project__images"> */}
+
 			{thumbImgs.map((img, i) => (
 				<div key={name} className="project__img img-noise" data-image={i + 1}>
 					<Link href={`/projects/${name}`}>
@@ -31,7 +34,6 @@ const Project = ({ projectData, index }) => {
 					</Link>
 				</div>
 			))}
-			{/* </div> */}
 		</div>
 	);
 };

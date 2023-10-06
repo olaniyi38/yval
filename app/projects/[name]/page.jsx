@@ -1,3 +1,4 @@
+import FadeIn from "@/app/components/FadeIn";
 import { fetchDocumentFromDb } from "@/app/utils/firebase.utils";
 import Image from "next/image";
 import { GoArrowDown } from "react-icons/go";
@@ -42,49 +43,55 @@ const ProjectPage = async ({ params }) => {
 					</div>
 				</div>
 			</div>
-			<div className="project-page__about">
-				<div className="project-page__about-item">
-					<h3>clients</h3>
-					<p>{client}</p>
-				</div>
-				<div className="project-page__about-item">
-					<h3>timeline</h3>
-					<p>{timeline}</p>
-				</div>
-				<div className="project-page__about-item">
-					<h3>service</h3>
-					<p>{services}</p>
-				</div>
-				<div className="project-page__about-item">
-					<h3>website</h3>
-					<p>{website}</p>
-				</div>
-			</div>
-
-			<div className="project-page__process">
-				{Object.entries(process).map(([title, about]) => (
-					<div key={title} className="card">
-						<div className="card__header">
-							<div className="card__subtitle">{title}</div>
-						</div>
-						<div className="card__body">
-							<div className="card__title">{about.name}</div>
-							<p className="card__text">{about.text}</p>
-						</div>
+			<FadeIn>
+				<div className="project-page__about">
+					<div className="project-page__about-item">
+						<h3>clients</h3>
+						<p>{client}</p>
 					</div>
-				))}
-			</div>
+					<div className="project-page__about-item">
+						<h3>timeline</h3>
+						<p>{timeline}</p>
+					</div>
+					<div className="project-page__about-item">
+						<h3>service</h3>
+						<p>{services}</p>
+					</div>
+					<div className="project-page__about-item">
+						<h3>website</h3>
+						<p>{website}</p>
+					</div>
+				</div>
+			</FadeIn>
 
-			<div className="project-page__gallery">
-				<h1>gallery</h1>
-				<div className="project-page__gallery-imgs">
-					{gallery.map((url) => (
-						<div key={name} className="project-page__gallery-img">
-							<Image src={url} fill alt={name} priority />
+			<FadeIn delay={0.4}>
+				<div className="project-page__process">
+					{Object.entries(process).map(([title, about]) => (
+						<div key={title} className="card">
+							<div className="card__header">
+								<div className="card__subtitle">{title}</div>
+							</div>
+							<div className="card__body">
+								<div className="card__title">{about.name}</div>
+								<p className="card__text">{about.text}</p>
+							</div>
 						</div>
 					))}
 				</div>
-			</div>
+			</FadeIn>
+
+			<FadeIn delay={0.5}>
+				<div className="project-page__gallery">
+					<h1>gallery</h1>
+					<div className="project-page__gallery-imgs">
+						{gallery.map((url) => (
+							<div key={name} className="project-page__gallery-img">
+								<Image src={url} fill alt={name} priority />
+							</div>
+						))}
+					</div>
+				</div>
+			</FadeIn>
 		</section>
 	);
 };

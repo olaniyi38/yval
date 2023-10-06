@@ -10,8 +10,9 @@
     }
 
     &__title {
-        font-size: clamp(1.7rem, 0.8009rem + 4.1101vw, 4.5rem);
+        font-size: clamp(1.7rem, 0.8009rem + 4.1101vw, 4.2rem);
         margin: 1rem 0rem;
+
     }
 
     .product {
@@ -23,8 +24,9 @@
     }
 
     .card {
+        padding: 1rem;
         &__img {
-            aspect-ratio: 3 / 3;
+            aspect-ratio: 3 / 3.2;
         }
 
         &__text {
@@ -46,8 +48,17 @@
     }
 
     @media screen and (min-width:30rem) {
+
         &__grid {
             grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         }
     }
+
+    @media screen and (min-width:64rem) {
+        &__title {
+            padding-left: 4rem;
+            margin-bottom: 3rem;
+        }
+    }
 }
+

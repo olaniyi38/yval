@@ -1,3 +1,5 @@
+@use '../utils' as * ;
+
 .home-news {
     padding: 1rem;
 
@@ -36,6 +38,10 @@
             }
         }
 
+        &__text {
+            font-size: 1rem;
+        }
+
         &__footer {
             transition: transform .3s ease-in-out, ;
 
@@ -44,15 +50,11 @@
                     overflow: hidden;
 
                     svg {
-                        animation: .5s 1 linear arrHover;
-                        animation-fill-mode: forwards;
-                        animation-timing-function: ease-out;
+                        @include arrowAnim($name: arrHoverTr)
                     }
                 }
             }
         }
-
-
 
         &__title {
             text-transform: capitalize
@@ -61,28 +63,5 @@
 
     @media screen and (min-width:64rem) {
         padding: 2rem 1rem;
-    }
-}
-
-@keyframes arrHover {
-    0% {
-        transform: translate(0rem, 0rem);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translate(1.5rem, -1.5rem);
-        opacity: 0;
-
-    }
-
-    80% {
-        transform: translate(-1.5rem, 1.5rem);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(0rem, 0rem);
-        opacity: 1;
     }
 }

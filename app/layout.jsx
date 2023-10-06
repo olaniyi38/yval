@@ -11,6 +11,7 @@ import Providers from "./features/Providers";
 import Cart from "./components/Cart";
 import { GoArrowUpRight } from "react-icons/go";
 import { ToastContainer } from "react-toastify";
+import Contact from "./components/Contact";
 
 // Font files can be colocated inside of `pages`
 const myFont = localFont({ src: "./fonts/Chillax-Variable.woff2" });
@@ -38,18 +39,7 @@ export default function RootLayout({ children }) {
 					/>
 					<Header />
 					<main>{children}</main>
-					<section className="contact">
-						<h4>contact</h4>
-						<div>
-							<p>Let&apos;s make your fashion brand shine</p>
-							<button>
-								<span>get in touch</span>
-								<span className="arrow">
-									<GoArrowUpRight />
-								</span>
-							</button>
-						</div>
-					</section>
+					<Contact />
 					<Footer />
 					<Cart />
 				</Providers>

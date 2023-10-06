@@ -1,10 +1,9 @@
-import React from "react";
-import { GoArrowUpRight } from "react-icons/go";
 
-const ArrowSvg = () => {
+
+const ArrowSvg = ({children}) => {
 	return (
 		<span className="arrow">
-			<GoArrowUpRight />
+			<i>{children}</i>
 		</span>
 	);
 };

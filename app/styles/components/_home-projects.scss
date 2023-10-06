@@ -1,3 +1,5 @@
+@use '../utils' as *;
+
 .home-projects {
     padding: 1rem;
 
@@ -7,13 +9,27 @@
         grid-template-areas: "overlay";
         margin-bottom: 1.5rem;
         border-radius: .5rem;
+        overflow: hidden;
+
+
+        &-link {
+            @include flex($align: center);
+            gap: 0rem .5rem;
+
+            &:hover {
+                .arrow {
+                    svg {
+                        @include arrowAnim($name: arrHoverTr)
+                    }
+                }
+            }
+        }
 
         &-about {
             grid-area: overlay;
             z-index: 2;
             display: flex;
             flex-direction: column;
-
             padding: 1rem 0rem 1rem 1rem;
 
 
@@ -60,8 +76,8 @@
             position: relative;
 
             &-img {
-                aspect-ratio: 16 / 7;
-                background-attachment: fixed;
+                aspect-ratio: 16 / 8;
+
             }
 
             &-about {
@@ -69,7 +85,19 @@
 
                 div {
                     font-weight: 500;
+                    @include flex($justify: space-between, $align:center);
 
+                    > p {
+                        font-weight: 200;
+                        border-radius: 100%;
+                        border-radius: .3rem;
+                        -webkit-backdrop-filter: blur(10px);
+                        backdrop-filter: blur(10px);
+                        background-color: rgba(238, 228, 228, 0.05);
+                        border: 1px solid rgba(255, 255, 255, .15);
+                        padding: .3rem 1rem;
+                        font-size: .9rem;
+                    }
                 }
 
             }
